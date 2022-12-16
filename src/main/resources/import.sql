@@ -84,7 +84,7 @@ INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (20
 INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (2005,"Actual","Expenditure","Special Transfers Excluding Top-ups to Endowment and Trust Funds",579,0.003);
 INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (2006,"Actual","Expenditure","Special Transfers Excluding Top-ups to Endowment and Trust Funds",2622,0.011);
 INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (2007,"Actual","Expenditure","Special Transfers Excluding Top-ups to Endowment and Trust Funds",1342,0.005);
-INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (2008,"Actual","Expenditure","Special Transfers Excluding Top-ups to Endowment and Trust Funds",4089,0.015):
+INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (2008,"Actual","Expenditure","Special Transfers Excluding Top-ups to Endowment and Trust Funds",4089,0.015);
 INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (2009,"Actual","Expenditure","Special Transfers Excluding Top-ups to Endowment and Trust Funds",4071,0.014);
 INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (2010,"Actual","Expenditure","Special Transfers Excluding Top-ups to Endowment and Trust Funds",1505,0.004);
 INSERT INTO position_fiscal (year,state,category,item,amount,percent) VALUES (2011,"Actual","Expenditure","Special Transfers Excluding Top-ups to Endowment and Trust Funds",2909,0.008);

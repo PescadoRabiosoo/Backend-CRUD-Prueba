@@ -7,6 +7,4 @@ import java.util.List;
 
 public interface IPositionFiscalDao extends JpaRepository<PositionFiscal,Long> {
 
-    public List<PositionFiscal> findByOrderByYearDesc();
-
 }

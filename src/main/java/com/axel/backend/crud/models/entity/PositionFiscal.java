@@ -1,6 +1,8 @@
 package com.axel.backend.crud.models.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,16 +14,22 @@ public class PositionFiscal implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotNull
     @Column(nullable = false)
     private Integer year;
+    @NotEmpty
     @Column(nullable = false)
     private String state;
+    @NotEmpty
     @Column(nullable = false)
     private String category;
+    @NotEmpty
     @Column(nullable = false)
     private String item;
+    @NotNull
     @Column(nullable = false)
     private Double amount;
+    @NotNull
     @Column(nullable = false)
     private Double percent;
     @Column(name = "create_at")

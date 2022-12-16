@@ -2,10 +2,12 @@ package com.axel.backend.crud.controllers;
 
 import com.axel.backend.crud.models.entity.PositionFiscal;
 import com.axel.backend.crud.models.services.IPositionFiscalService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -31,11 +33,12 @@ public class PositionFiscalRestController {
 
     @GetMapping("/position/page/{page}")
     public Page<PositionFiscal> index(@PathVariable Integer page){
-        return fiscalService.findAll(PageRequest.of(page,15));
+        return fiscalService.findAll(PageRequest.of(page,15,
+                Sort.by("year").descending().and(Sort.by("category").descending()).and(Sort.by("amount").descending())));
     }
 
     @PostMapping("/position")
-    public ResponseEntity<?> create(@RequestBody PositionFiscal positionFiscal, BindingResult result){
+    public ResponseEntity<?> create(@Valid @RequestBody PositionFiscal positionFiscal, BindingResult result){
         PositionFiscal fiscalNew = null;
         Map<String,Object> response = new HashMap<>();
 
@@ -61,7 +64,7 @@ public class PositionFiscalRestController {
     }
 
     @PutMapping("/position/{id}")
-    public ResponseEntity<?> update(@RequestBody PositionFiscal positionFiscal, BindingResult result,@PathVariable Long id){
+    public ResponseEntity<?> update(@Valid @RequestBody PositionFiscal positionFiscal, BindingResult result,@PathVariable Long id){
         PositionFiscal fiscalActual=fiscalService.findById(id);
         PositionFiscal fiscalUpdate=null;
 
